@@ -56,7 +56,9 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
 ```
-Your answer...
+architecture 1: overwrite customer addresses (street, street_number, postal_code, etc) when the customer address no longer matches the customer_id. this is type 1.
+
+architecture 2: when the customer address doesn't match the customer_id, mark the old data as "obsolete" and create a new row with the customer_id and the new customer address (not maked as obsolete). this is type 2.
 ```
 
 ***
